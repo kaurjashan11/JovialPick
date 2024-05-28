@@ -17,10 +17,10 @@ const HomeContextProvider = (props)=>{
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(()=>{
-        fetch('http://localhost:4000/allproducts').then((response)=>response.json()).then((data)=>setAll_product(data))
+        fetch('https://jovial-pick-api.vercel.app/allproducts').then((response)=>response.json()).then((data)=>setAll_product(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/getcart',{
+            fetch('https://jovial-pick-api.vercel.app/getcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -35,7 +35,7 @@ const HomeContextProvider = (props)=>{
     const addToCart = (itemId)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/addtocart',{
+            fetch('https://jovial-pick-api.vercel.app/addtocart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -50,7 +50,7 @@ const HomeContextProvider = (props)=>{
     const removeFromCart = (itemId)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}));
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/removefromcart',{
+            fetch('https://jovial-pick-api.vercel.app/removefromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
