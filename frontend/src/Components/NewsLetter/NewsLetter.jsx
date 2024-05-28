@@ -27,7 +27,7 @@ const NewsLetter = () => {
         e.preventDefault();
         if (email) {
             try {
-                const response = await fetch('http://localhost:4000/send-email', {
+                const response = await fetch('https://jovial-pick-api.vercel.app/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
