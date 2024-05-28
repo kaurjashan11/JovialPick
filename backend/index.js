@@ -20,8 +20,8 @@ app.use(cors(
 ));
 
 // Database connection with mongodb
-mongoose.connect("mongodb+srv://root:root@cluster0.hykcy7p.mongodb.net/e-commerce");
-//mongoose.connect("mongodb+srv://root:root@cluster0.hykcy7p.mongodb.net/e-commerce?retryWrites=true&w=majority&appName=Cluster0");
+//mongoose.connect("mongodb+srv://root:root@cluster0.hykcy7p.mongodb.net/e-commerce");
+mongoose.connect("mongodb+srv://root:root@cluster0.hykcy7p.mongodb.net/e-commerce?retryWrites=true&w=majority&appName=Cluster0");
 
 
 // Api creation
