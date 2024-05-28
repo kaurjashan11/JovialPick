@@ -12,7 +12,7 @@ const sendVarifyMail = require('./mail_send');
 app.use(express.json());
 app.use(cors(
     {
-        origin: [""],
+        origin: ["https://jovial-pick-web.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
